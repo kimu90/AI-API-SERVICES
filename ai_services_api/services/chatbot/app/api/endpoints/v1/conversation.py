@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException
-from ai_services_api.schemas import ChatRequest
-from ai_services_api.utils.message_handler import MessageHandler
-from ai_services_api.utils.llm_manager import GeminiLLMManager
+from ai_services_api.services.chatbot.schemas import ChatRequest
+from ai_services_api.services.chatbot.utils.message_handler import MessageHandler
+from ai_services_api.services.chatbot.utils.llm_manager import GeminiLLMManager
 
 router = APIRouter()
 

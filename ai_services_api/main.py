@@ -18,14 +18,14 @@ app.add_middleware(
 )
 
 # Serve static files
-app.mount("/static", StaticFiles(directory="app/static"), name="static")
+app.mount("/static", StaticFiles(directory="ai_services_api/services/chatbot/static"), name="static")
 
 # Include the chatbot API router
 app.include_router(api_router)
 
 @app.get("/", response_class=HTMLResponse)
 async def read_index():
-    with open("app/templates/index.html") as f:
+    with open("ai_services_api/services/chatbot/templates/index.html") as f:
         return f.read()
 
 # Health check endpoint
